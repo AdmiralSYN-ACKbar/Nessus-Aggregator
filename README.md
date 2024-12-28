@@ -45,7 +45,7 @@ Nessus Aggregator is a Python-based tool that automates aggregation of Nessus vu
 
 - API keys are stored in `~/.nessus_env` with restricted permissions (`chmod 600`). Your Nessus API keys are stored in this file. **Delete it after running if you do not want this to be stored.**
 - SSL certificate verification is disabled by default due to common use of self-signed certificates.
-- Scan files are automatically deleted after processing.
+- Downloads of scan files created through API calls are automatically deleted after processing.
 
 ## Output Format
 
