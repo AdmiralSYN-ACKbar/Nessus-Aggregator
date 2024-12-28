@@ -11,15 +11,20 @@ Nessus Aggregator is a Python-based tool that automates aggregation of Nessus vu
 - `python3-venv` / `python3-pip` (install with apt if needed)
 - Linux operating system
 - Nessus Essentials, Professional, or Expert
-- API keys from your Nessus instance
+- API keys from your Nessus instance [(see API key generation documentation)](https://docs.tenable.com/nessus/Content/GenerateAnAPIKey.htm)
 
 ## Installation
 
 1. Ensure all prerequisites are met.
-2. Download the 3 files in the nessus-aggregator repository subdirectory manually or with the command `git clone --filter=blob:none --sparse https://github.com/admiralsyn-ackbar/nessus-aggregator.git`
-3. Run `setup.py` with Python and fill out the fields in the GUI. 
-4. A virtual environment with the necessary Python modules and a `run_nessus_aggregator.sh` script will be generated.
-5. Run the `run_nessus_aggregator.sh` or click the “Execute Run Script” button in the GUI to generate the report.
+2. Download the 3 files in the [nessus-aggregator subdirectory](https://github.com/AdmiralSYN-ACKbar/Nessus-Aggregator/tree/main/nessus-aggregator) manually or with the git commands:  
+`git clone --filter=blob:none --sparse https://github.com/admiralsyn-ackbar/nessus-aggregator.git`  
+`cd nessus-aggregator`  
+`git sparse-checkout set "nessus-aggregator/`  
+`git checkout`  
+
+4. Run `setup.py` with Python and fill out the fields in the GUI. 
+5. A virtual environment with the necessary Python modules and a `run_nessus_aggregator.sh` script will be generated.
+6. Run the `run_nessus_aggregator.sh` or click the “Execute Run Script” button in the GUI to generate the report.
 
 ## Automation
 - The `run_nessus_aggregator.sh` script can be scheduled via cron.
