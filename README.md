@@ -24,7 +24,7 @@ Nessus Aggregator is a Python-based tool that automates aggregation of Nessus vu
 ## Automation
 - The `run_nessus_aggregator.sh` script can be scheduled via cron.
 
-![CLI Output](https://github.com/AdmiralSYN-ACKbar/Nessus-Aggregator/blob/main/screenshots/program_execution.png?raw=true)
+![CLI Output](https://github.com/AdmiralSYN-ACKbar/Nessus-Aggregator/blob/main/screenshots/run_script_output.png?raw=true)
 
 
 ## How It Works
@@ -35,6 +35,12 @@ Nessus Aggregator is a Python-based tool that automates aggregation of Nessus vu
   - **Scan Information**: Overview of each scan.
   - **Vulnerability Summary**: Summary of hosts and findings by severity.
   - **Vulnerability Details**: Detailed findings with links to Tenable's plugin database.
+ 
+## Security Notes
+
+- API keys are stored in `~/.nessus_env` with restricted permissions (`chmod 600`). Your Nessus API keys are stored in this file. **Delete it after running if you do not want this to be stored.**
+- SSL certificate verification is disabled by default due to common use of self-signed certificates.
+- Scan files are automatically deleted after processing.
 
 ## Output Format
 
@@ -47,10 +53,4 @@ The generated Excel report includes:
  ![Report Tab 2](https://github.com/AdmiralSYN-ACKbar/Nessus-Aggregator/blob/main/screenshots/report2.png?raw=true)
  ![Report Tab 3](https://github.com/AdmiralSYN-ACKbar/Nessus-Aggregator/blob/main/screenshots/report3.png?raw=true)
 
-## Security Notes
 
-- API keys are stored in `~/.nessus_env` with restricted permissions (`chmod 600`).
-- SSL certificate verification is disabled by default due to common use of self-signed certificates.
-- Scan files are automatically cleaned up after processing.
-- Environment variables are secured in the user's home directory.
-- The script creates a file at `~/.nessus_env` that includes the Nessus API keys and runs `chmod 600` on it. Your Nessus API keys are stored in this file. Delete it after running if you do not want this to be stored.
