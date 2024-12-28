@@ -16,7 +16,7 @@ Nessus Aggregator is a Python-based tool that automates aggregation of Nessus vu
 ## Installation
 
 1. Ensure all prerequisites are met.
-2. Download files in nessus-aggregator manually or with the command `git clone --filter=blob:none --sparse https://github.com/admiralsyn-ackbar/nessus-aggregator.git`
+2. Download the 3 files in the nessus-aggregator repository subdirectory manually or with the command `git clone --filter=blob:none --sparse https://github.com/admiralsyn-ackbar/nessus-aggregator.git`
 3. Run `setup.py` with Python and fill out the fields in the GUI. 
 4. A virtual environment with the necessary Python modules and a `run_nessus_aggregator.sh` script will be generated.
 5. Run the `run_nessus_aggregator.sh` or click the “Execute Run Script” button in the GUI to generate the report.
