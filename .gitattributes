@@ -1,0 +1,2 @@
+* export-ignore
+/nessus-aggregator/** -export-ignore
